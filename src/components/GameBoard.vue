@@ -4,6 +4,8 @@ import GameCell from "@/components/GameCell.vue";
 import { useGameStore } from "@/stores/gameStore.ts";
 
 const gameStore = useGameStore()
+
+
 </script>
 
 <template>

@@ -2,6 +2,12 @@
 
 import GameBoard from "@/components/GameBoard.vue";
 
+import { useGameStore } from "@/stores/gameStore.ts";
+
+const gameStore = useGameStore()
+
+gameStore.checkWinner()
+
 </script>
 
 <template>

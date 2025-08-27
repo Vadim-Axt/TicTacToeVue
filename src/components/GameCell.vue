@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { useGameStore } from "@/stores/gameStore.ts";
+  import GameCircle from "@/components/GameCircle.vue";
 
   const props = defineProps<{ index: number }>()
 
@@ -9,6 +10,7 @@
     gameStore.makeMove(props.index)
   }
 
+  console.log(props.index)
 </script>
 
 <template>
