@@ -5,6 +5,7 @@ import { useGameStore } from "@/stores/gameStore.ts";
 
 const gameStore = useGameStore()
 
+const size = '20px'
 
 </script>
 
@@ -16,6 +17,7 @@ const gameStore = useGameStore()
     <div class="board">
       <GameCell v-for="index in 9" :index="index - 1" :key="index" />
 
+      <div class="line"></div>
     </div>
 
     <button class="reset-btn" @click="gameStore.resetGame()">Новая игра</button>
@@ -28,6 +30,7 @@ const gameStore = useGameStore()
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    position: relative;
     background: black;
     gap: 5px;
     max-width: 900px;
@@ -64,6 +67,12 @@ const gameStore = useGameStore()
 
   .reset-btn:hover {
     background: #0056b3;
+  }
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: black;
   }
 
 </style>

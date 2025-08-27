@@ -12,6 +12,6 @@
   height: 90%;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid #000000;
+  border: 4px solid #000000;
 }
 </style>
