@@ -30,8 +30,13 @@ const gameStore = useGameStore()
     grid-template-rows: repeat(3, 1fr);
     background: black;
     gap: 5px;
+    max-width: 900px;
+    max-height: 900px;
     width: 900px;
     height: 900px;
+    min-width: 300px;
+    min-height: 300px;
+
   }
   .game-container {
     display: flex;
@@ -60,7 +65,6 @@ const gameStore = useGameStore()
   .reset-btn:hover {
     background: #0056b3;
   }
-
 
 </style>
 

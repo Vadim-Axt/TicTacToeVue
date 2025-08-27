@@ -5,7 +5,6 @@
 
   const props = defineProps<{
     index: number,
-
   }>()
 
   const gameStore = useGameStore()
@@ -19,7 +18,7 @@
 
 <template>
   <div class="cell" @click="handClick()">
-    <div class="content" @click="console.log(index)">
+    <div class="content">
       <GameCircle v-if="gameStore.board[index] === '0' "></GameCircle>
       <game-cross v-if="gameStore.board[index] === '1' "></game-cross>
     </div>
