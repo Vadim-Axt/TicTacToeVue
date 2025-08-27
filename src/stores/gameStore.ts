@@ -43,9 +43,18 @@ export const useGameStore = defineStore('game', () => {
   }
 
   const gameStatus = computed(() => {
-    if (winner.value) return `Winner: ${winner.value}`
-    if (isDraw.value) return 'Draw'
-    return `Current player: ${currentPlayer.value}`
+    if (winner.value) {
+      if (winner.value === '0') winner.value = 'Нолик'
+      if (winner.value === '1') winner.value = 'Крестик'
+      return `Победитель: ${winner.value}`
+    }
+    if (isDraw.value) return 'Ничья'
+
+    const circle = 'Нолик'
+    const cross = 'Крестик'
+
+
+    return `Сейчас ходит: ${currentPlayer.value === '1' ? cross : circle}`
   })
 
   return {

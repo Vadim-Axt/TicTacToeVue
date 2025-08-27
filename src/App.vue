@@ -12,7 +12,7 @@ gameStore.checkWinner()
 
 <template>
 
-  <header>Tic Tac Toe</header>
+  <header>Крестики / Нолики</header>
 
   <main>
 
@@ -46,6 +46,7 @@ body {
 header {
   margin-bottom: 30px;
   text-align: center;
+  font-size: 30px;
 }
 
 h1 {

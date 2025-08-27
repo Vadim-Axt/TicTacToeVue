@@ -1,8 +1,12 @@
 <script setup lang="ts">
   import { useGameStore } from "@/stores/gameStore.ts";
   import GameCircle from "@/components/GameCircle.vue";
+  import GameCross from "@/components/GameCross.vue";
 
-  const props = defineProps<{ index: number }>()
+  const props = defineProps<{
+    index: number,
+
+  }>()
 
   const gameStore = useGameStore()
 
@@ -10,12 +14,15 @@
     gameStore.makeMove(props.index)
   }
 
-  console.log(props.index)
+
 </script>
 
 <template>
   <div class="cell" @click="handClick()">
-    <div class="content">{{ gameStore.board[index] }}</div>
+    <div class="content" @click="console.log(index)">
+      <GameCircle v-if="gameStore.board[index] === '0' "></GameCircle>
+      <game-cross v-if="gameStore.board[index] === '1' "></game-cross>
+    </div>
   </div>
 </template>
 

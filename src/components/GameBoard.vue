@@ -14,10 +14,11 @@ const gameStore = useGameStore()
     <div class="status">{{ gameStore.gameStatus }}</div>
 
     <div class="board">
-      <GameCell v-for="index in 9" :index="index - 1" :key="index"/>
+      <GameCell v-for="index in 9" :index="index - 1" :key="index" />
+
     </div>
 
-    <button class="reset-btn" @click="gameStore.resetGame()">New Game</button>
+    <button class="reset-btn" @click="gameStore.resetGame()">Новая игра</button>
   </div>
 
 </template>
